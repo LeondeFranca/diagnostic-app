@@ -11,8 +11,8 @@
   "model_selector": {
     "label": "Select Model",
     "about": "About the models",
-    "cnn": "CNN",
-    "svm": "SVM",
+    "cnn": "CNN (Convolutional Neural Network)",
+    "svm": "SVM (Support Vector Machine)",
     "rf": "Random Forest",
     "desc_cnn": "Convolutional neural network that analyzes the image directly.",
     "desc_svm": "SVM classifier based on extracted image features.",
@@ -26,5 +26,27 @@
   "navbar": {
     "article": "Article",
     "credits": "Credits"
+  },
+
+ "model_info": {
+  "title": "About the used models",
+  "tip": "We recommend using the CNN model for the most reliable diagnosis.",
+  "cnn": {
+    "title": "CNN (Convolutional Neural Network)",
+    "desc": "This is the most advanced model. It learns from thousands of exams and can detect complex patterns in the images. Best choice for accurate results.",
+    "accuracy": "Approximate accuracy: 94%"
+  },
+  "svm": {
+    "title": "SVM (Support Vector Machine)",
+    "desc": "This model analyzes shapes and contrasts in images to separate healthy from sick. Simpler than CNN, but still works well in many cases.",
+    "accuracy": "Approximate accuracy: 85%"
+  },
+  "rf": {
+    "title": "Random Forest",
+    "desc": "Works like a team of decision trees that vote together. It's simple and fast, ideal for quick results even if slightly less accurate.",
+    "accuracy": "Approximate accuracy: 80%"
   }
+}
+
+
 }

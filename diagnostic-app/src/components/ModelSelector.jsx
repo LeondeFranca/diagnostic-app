@@ -20,12 +20,7 @@ const ModelSelector = ({ selectedModel, setSelectedModel }) => {
         </Select>
       </FormControl>
 
-      <Typography sx={{ mt: 2 }} variant="body2">
-        <strong>{t("model_selector.about")}</strong><br />
-        <strong>{t("model_selector.cnn")}:</strong> {t("model_selector.desc_cnn")}<br />
-        <strong>{t("model_selector.svm")}:</strong> {t("model_selector.desc_svm")}<br />
-        <strong>{t("model_selector.rf")}:</strong> {t("model_selector.desc_rf")}
-      </Typography>
+
     </Box>
   );
 };

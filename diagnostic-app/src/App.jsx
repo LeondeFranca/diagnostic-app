@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import UploadArea from "./components/UploadArea";
 import ModelSelector from "./components/ModelSelector";
 import ResultDisplay from "./components/ResultDisplay";
+import ModelInfoAccordion from "./components/ModelInfoAccordion"; // ✅ importado
 import { useTranslation } from "react-i18next";
 import { Button, Box, Container, Typography } from "@mui/material";
 
@@ -54,6 +55,7 @@ function App() {
         </Typography>
 
         <ModelSelector selectedModel={selectedModel} setSelectedModel={setSelectedModel} />
+        <ModelInfoAccordion /> {/* ✅ adicionado aqui */}
         <UploadArea onImageUpload={setFile} />
 
         <Box textAlign="center" mt={4}>

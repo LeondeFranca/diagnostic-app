@@ -11,8 +11,8 @@
   "model_selector": {
     "label": "Selecionar Modelo",
     "about": "Sobre os modelos",
-    "cnn": "CNN",
-    "svm": "SVM",
+    "cnn": "CNN (Rede Neural Convolucional)",
+    "svm": "SVM (Máquina de Vetores de Suporte)",
     "rf": "Random Forest",
     "desc_cnn": "Rede neural convolucional que analisa a imagem diretamente.",
     "desc_svm": "Classificador SVM baseado em características extraídas da imagem.",
@@ -26,5 +26,26 @@
   "navbar": {
     "article": "Artigo",
     "credits": "Créditos"
+  },
+  "model_info": {
+  "title": "Sobre os modelos utilizados",
+  "tip": "Recomendamos usar o modelo CNN para obter um diagnóstico mais confiável.",
+  "cnn": {
+    "title": "CNN (Rede Neural Convolucional)",
+    "desc": "É o modelo mais avançado. Ele aprende a partir de milhares de exames e consegue identificar padrões complexos nas imagens. Ideal para diagnósticos mais precisos.",
+    "accuracy": "Precisão aproximada: 94%"
+  },
+  "svm": {
+    "title": "SVM (Máquina de Vetores de Suporte)",
+    "desc": "Modelo que analisa formas e tons das imagens para separar entre saudável e doente. Menos complexo, mas ainda funciona bem em muitos casos.",
+    "accuracy": "Precisão aproximada: 85%"
+  },
+  "rf": {
+    "title": "Random Forest",
+    "desc": "Funciona como uma equipe de decisões que votam juntas. Simples, rápido e útil para resultados rápidos, mesmo que um pouco menos preciso.",
+    "accuracy": "Precisão aproximada: 80%"
   }
+}
+
+
 }
