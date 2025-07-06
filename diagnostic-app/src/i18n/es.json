@@ -1,0 +1,30 @@
+{
+  "title": "Diagnóstico de Neumonía por Imagen",
+  "upload": {
+    "button": "Subir Imagen",
+    "preview": "Imagen seleccionada:"
+  },
+  "diagnose_button": "Diagnosticar",
+  "diagnosing": "Cargando diagnóstico...",
+  "diagnosis": "Diagnóstico",
+  "confidence": "Confianza",
+  "model_selector": {
+    "label": "Seleccionar Modelo",
+    "about": "Sobre los modelos",
+    "cnn": "CNN",
+    "svm": "SVM",
+    "rf": "Random Forest",
+    "desc_cnn": "Red neuronal convolucional que analiza la imagen directamente.",
+    "desc_svm": "Clasificador SVM basado en características extraídas de la imagen.",
+    "desc_rf": "Modelo Random Forest entrenado con características extraídas."
+  },
+  "result": {
+    "loading": "Cargando diagnóstico...",
+    "diagnosis": "Diagnóstico",
+    "confidence": "Confianza"
+  },
+  "navbar": {
+    "article": "Artículo",
+    "credits": "Créditos"
+  }
+}

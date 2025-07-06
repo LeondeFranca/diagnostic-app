@@ -1,0 +1,30 @@
+{
+  "title": "Diagnóstico de Pneumonia por Imagem",
+  "upload": {
+    "button": "Fazer Upload da Imagem",
+    "preview": "Imagem selecionada:"
+  },
+  "diagnose_button": "Diagnosticar",
+  "diagnosing": "Carregando diagnóstico...",
+  "diagnosis": "Diagnóstico",
+  "confidence": "Confiança",
+  "model_selector": {
+    "label": "Selecionar Modelo",
+    "about": "Sobre os modelos",
+    "cnn": "CNN",
+    "svm": "SVM",
+    "rf": "Random Forest",
+    "desc_cnn": "Rede neural convolucional que analisa a imagem diretamente.",
+    "desc_svm": "Classificador SVM baseado em características extraídas da imagem.",
+    "desc_rf": "Modelo Random Forest treinado com características extraídas."
+  },
+  "result": {
+    "loading": "Carregando diagnóstico...",
+    "diagnosis": "Diagnóstico",
+    "confidence": "Confiança"
+  },
+  "navbar": {
+    "article": "Artigo",
+    "credits": "Créditos"
+  }
+}

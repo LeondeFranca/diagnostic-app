@@ -1,0 +1,30 @@
+{
+  "title": "Pneumonia Diagnosis by Image",
+  "upload": {
+    "button": "Upload Image",
+    "preview": "Selected image:"
+  },
+  "diagnose_button": "Diagnose",
+  "diagnosing": "Loading diagnosis...",
+  "diagnosis": "Diagnosis",
+  "confidence": "Confidence",
+  "model_selector": {
+    "label": "Select Model",
+    "about": "About the models",
+    "cnn": "CNN",
+    "svm": "SVM",
+    "rf": "Random Forest",
+    "desc_cnn": "Convolutional neural network that analyzes the image directly.",
+    "desc_svm": "SVM classifier based on extracted image features.",
+    "desc_rf": "Random Forest model trained on extracted features."
+  },
+  "result": {
+    "loading": "Loading diagnosis...",
+    "diagnosis": "Diagnosis",
+    "confidence": "Confidence"
+  },
+  "navbar": {
+    "article": "Article",
+    "credits": "Credits"
+  }
+}

@@ -1,0 +1,26 @@
+# Ambiente virtual
+app-env/
+venv/
+.env/
+
+# Dependências do Python
+__pycache__/
+*.pyc
+
+# Dados temporários
+uploads/
+*.pkl
+*.h5
+
+# Node e React
+node_modules/
+dist/
+build/
+
+# Configs do sistema
+.DS_Store
+*.log
+
+# IDEs
+.vscode/
+.idea/
