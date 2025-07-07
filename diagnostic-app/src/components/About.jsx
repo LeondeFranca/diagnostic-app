@@ -59,7 +59,7 @@ const About = () => {
         📄 {t("about_page.read_article")}:
       </Typography>
       <Link
-        href="https://drive.google.com/file/d/1jvkusPjyVA6jhSZFVMy-PcOwf5FcfYV7/view?usp=sharing"
+        href="https://drive.google.com/file/d/12dEBaoJ9afYAnngHYF7RgdgEA0czDYZW/view?usp=sharing"
         target="_blank"
         rel="noopener"
         color="secondary"
@@ -79,7 +79,7 @@ const About = () => {
                 <Avatar
                   src={member.avatar}
                   alt={member.name}
-                  sx={{ width: 56, height: 56 }}
+                  sx={{ width: 86, height: 86 }}
                 />
                 <Box>
                   <Typography variant="subtitle1" fontWeight="bold">
