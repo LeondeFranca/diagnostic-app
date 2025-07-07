@@ -24,8 +24,9 @@
     "confidence": "Confidence"
   },
   "navbar": {
-    "article": "Article",
-    "credits": "Credits"
+    "about": "About",
+    "home": "Home"
+    
   },
 
  "model_info": {
@@ -46,7 +47,24 @@
     "desc": "Works like a team of decision trees that vote together. It's simple and fast, ideal for quick results even if slightly less accurate.",
     "accuracy": "Approximate accuracy: 80%"
   }
+},
+"about_page": {
+  "title": "About the Project",
+  "story": "The idea for this app came from the need to make pneumonia diagnosis more accessible and faster, using modern technologies like neural networks and machine learning models.",
+  "impact": "We thought of something that could help both doctors and patients, offering a preliminary diagnosis based on X-ray images, reducing analysis time and increasing efficiency.",
+  "goal": "We hope this project can positively contribute to the healthcare field and become a useful tool in everyday clinical routines.",
+  "read_article": "Read our full article",
+  "article_link": "Click here to read the project paper",
+  "team": "Project Team",
+
+  "leon": "Main developer, project creator, and responsible for backend, frontend, and model integration.",
+  "lucas": "Responsible for building and validating the CNN model and contributor to the scientific paper.",
+  "igor": "Worked on adapting and documenting the SVM model, and contributed to writing the article.",
+  "manoel": "Assisted with testing, content review, and general project support.",
+  "vinicius": "Technical advisor and AI specialist, supporting architectural decisions in the project.",
+  "flavio": "Professor and healthcare advisor, providing clinical insights for the project."
 }
+
 
 
 }

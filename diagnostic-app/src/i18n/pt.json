@@ -24,28 +24,43 @@
     "confidence": "Confiança"
   },
   "navbar": {
-    "article": "Artigo",
-    "credits": "Créditos"
+    "about": "Sobre",
+    "home": "Início"
   },
   "model_info": {
-  "title": "Sobre os modelos utilizados",
-  "tip": "Recomendamos usar o modelo CNN para obter um diagnóstico mais confiável.",
-  "cnn": {
-    "title": "CNN (Rede Neural Convolucional)",
-    "desc": "É o modelo mais avançado. Ele aprende a partir de milhares de exames e consegue identificar padrões complexos nas imagens. Ideal para diagnósticos mais precisos.",
-    "accuracy": "Precisão aproximada: 94%"
+    "title": "Sobre os modelos utilizados",
+    "tip": "Recomendamos usar o modelo CNN para obter um diagnóstico mais confiável.",
+    "cnn": {
+      "title": "CNN (Rede Neural Convolucional)",
+      "desc": "É o modelo mais avançado. Ele aprende a partir de milhares de exames e consegue identificar padrões complexos nas imagens. Ideal para diagnósticos mais precisos.",
+      "accuracy": "Precisão aproximada: 94%"
+    },
+    "svm": {
+      "title": "SVM (Máquina de Vetores de Suporte)",
+      "desc": "Modelo que analisa formas e tons das imagens para separar entre saudável e doente. Menos complexo, mas ainda funciona bem em muitos casos.",
+      "accuracy": "Precisão aproximada: 85%"
+    },
+    "rf": {
+      "title": "Random Forest",
+      "desc": "Funciona como uma equipe de decisões que votam juntas. Simples, rápido e útil para resultados rápidos, mesmo que um pouco menos preciso.",
+      "accuracy": "Precisão aproximada: 80%"
+    }
   },
-  "svm": {
-    "title": "SVM (Máquina de Vetores de Suporte)",
-    "desc": "Modelo que analisa formas e tons das imagens para separar entre saudável e doente. Menos complexo, mas ainda funciona bem em muitos casos.",
-    "accuracy": "Precisão aproximada: 85%"
-  },
-  "rf": {
-    "title": "Random Forest",
-    "desc": "Funciona como uma equipe de decisões que votam juntas. Simples, rápido e útil para resultados rápidos, mesmo que um pouco menos preciso.",
-    "accuracy": "Precisão aproximada: 80%"
-  }
-}
+  "about_page": {
+  "title": "Sobre o Projeto",
+  "story": "A ideia deste aplicativo surgiu da necessidade de tornar o diagnóstico de pneumonia mais acessível e rápido, utilizando tecnologias modernas como redes neurais e modelos de aprendizado de máquina.",
+  "impact": "Pensamos em algo que pudesse auxiliar tanto médicos quanto pacientes, oferecendo um diagnóstico prévio com base em imagens de raio-X, reduzindo o tempo de análise e aumentando a eficiência do atendimento.",
+  "goal": "Esperamos que este projeto possa contribuir de forma positiva para a área da saúde e se tornar uma ferramenta útil no dia a dia clínico.",
+  "read_article": "Acesse nosso artigo completo",
+  "article_link": "Clique aqui para ler o artigo do projeto",
+  "team": "Equipe do Projeto",
 
+  "leon": "Responsável pela construção e validação do modelo de CNN",
+  "lucas": "Responsável pela construção e validação do modelo de Random Forest",
+  "igor": "Responsável pela construção e validação do modelo de SVM",
+  "manoel": "colaborador no artigo científico e suporte geral ao projeto.",
+  "vinicius": "Professor e orientador",
+  "flavio": "Professor e orientador"
+}
 
 }

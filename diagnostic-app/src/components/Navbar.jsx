@@ -1,3 +1,4 @@
+// Navbar.jsx
 import React from "react";
 import {
   AppBar,
@@ -6,12 +7,14 @@ import {
   Select,
   MenuItem,
   Box,
-  Link,
+  Link as MuiLink,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { Link as RouterLink, useLocation } from "react-router-dom"; // ✅ Adiciona useLocation
 
 const Navbar = () => {
   const { i18n, t } = useTranslation();
+  const location = useLocation(); // ✅ Pega a rota atual
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -33,17 +36,40 @@ const Navbar = () => {
           px: 2,
         }}
       >
-        <Typography variant="subtitle1" fontWeight="bold" fontSize="1.2rem">
+        <MuiLink
+          component={RouterLink}
+          to="/"
+          underline="none"
+          color="inherit"
+          fontSize="1.2rem"
+          fontWeight="bold"
+        >
           {t("title")}
-        </Typography>
+        </MuiLink>
 
         <Box sx={{ display: "flex", alignItems: "center", gap: 2.5 }}>
-          <Link href="#artigo" underline="hover" color="inherit" fontSize="0.85rem">
-            {t("navbar.article")}
-          </Link>
-          <Link href="#creditos" underline="hover" color="inherit" fontSize="0.85rem">
-            {t("navbar.credits")}
-          </Link>
+          {/* ✅ Mostra "Início" somente na rota /sobre */}
+          {location.pathname === "/sobre" && (
+            <MuiLink
+              component={RouterLink}
+              to="/"
+              underline="hover"
+              color="inherit"
+              fontSize="0.85rem"
+            >
+              {t("navbar.home")}
+            </MuiLink>
+          )}
+
+          <MuiLink
+            component={RouterLink}
+            to="/sobre"
+            underline="hover"
+            color="inherit"
+            fontSize="0.85rem"
+          >
+            {t("navbar.about")}
+          </MuiLink>
 
           <Select
             size="small"

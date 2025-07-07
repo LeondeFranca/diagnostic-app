@@ -1,15 +1,17 @@
+// App.jsx
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // ✅ Adicionado
 import Navbar from "./components/Navbar";
 import UploadArea from "./components/UploadArea";
 import ModelSelector from "./components/ModelSelector";
 import ResultDisplay from "./components/ResultDisplay";
-import ModelInfoAccordion from "./components/ModelInfoAccordion"; // ✅ importado
+import ModelInfoAccordion from "./components/ModelInfoAccordion";
+import About from "./components/About"; // ✅ Página nova
 import { useTranslation } from "react-i18next";
 import { Button, Box, Container, Typography } from "@mui/material";
 
-function App() {
+function Home() {
   const { t } = useTranslation();
-
   const [selectedModel, setSelectedModel] = useState("cnn");
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
@@ -47,31 +49,40 @@ function App() {
   };
 
   return (
-    <>
+    <Container maxWidth="md" sx={{ mt: 10, py: 5, bgcolor: "#f9f9f9", borderRadius: 2 }}>
+      <Typography variant="h4" align="center" gutterBottom>
+        {t("title")}
+      </Typography>
+
+      <ModelSelector selectedModel={selectedModel} setSelectedModel={setSelectedModel} />
+      <ModelInfoAccordion />
+      <UploadArea onImageUpload={setFile} />
+
+      <Box textAlign="center" mt={4}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleDiagnose}
+          disabled={!file}
+        >
+          {t("diagnose_button")}
+        </Button>
+      </Box>
+
+      <ResultDisplay result={result} confidence={confidence} loading={loading} />
+    </Container>
+  );
+}
+
+function App() {
+  return (
+    <Router>
       <Navbar />
-      <Container maxWidth="md" sx={{ mt: 10, py: 5, bgcolor: "#f9f9f9", borderRadius: 2 }}>
-        <Typography variant="h4" align="center" gutterBottom>
-          {t("title")}
-        </Typography>
-
-        <ModelSelector selectedModel={selectedModel} setSelectedModel={setSelectedModel} />
-        <ModelInfoAccordion /> {/* ✅ adicionado aqui */}
-        <UploadArea onImageUpload={setFile} />
-
-        <Box textAlign="center" mt={4}>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleDiagnose}
-            disabled={!file}
-          >
-            {t("diagnose_button")}
-          </Button>
-        </Box>
-
-        <ResultDisplay result={result} confidence={confidence} loading={loading} />
-      </Container>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<About />} /> {/* ✅ Nova rota */}
+      </Routes>
+    </Router>
   );
 }
 

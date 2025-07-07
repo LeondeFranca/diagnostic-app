@@ -24,8 +24,8 @@
     "confidence": "Confianza"
   },
   "navbar": {
-    "article": "Artículo",
-    "credits": "Créditos"
+    "about": "Acerca",
+    "home": "Inicio"
   },
  "model_info": {
   "title": "Acerca de los modelos utilizados",
@@ -45,7 +45,24 @@
     "desc": "Funciona como un grupo de decisiones que votan en conjunto. Es rápido y sencillo, útil para resultados rápidos aunque sea un poco menos preciso.",
     "accuracy": "Precisión aproximada: 80%"
   }
+},
+"about_page": {
+  "title": "Sobre el Proyecto",
+  "story": "La idea de esta aplicación surgió de la necesidad de hacer que el diagnóstico de neumonía sea más accesible y rápido, utilizando tecnologías modernas como redes neuronales y modelos de aprendizaje automático.",
+  "impact": "Pensamos en algo que pudiera ayudar tanto a médicos como a pacientes, ofreciendo un diagnóstico previo basado en imágenes de rayos X, reduciendo el tiempo de análisis y aumentando la eficiencia.",
+  "goal": "Esperamos que este proyecto pueda contribuir positivamente al área de la salud y convertirse en una herramienta útil en la rutina clínica diaria.",
+  "read_article": "Accede a nuestro artículo completo",
+  "article_link": "Haz clic aquí para leer el artículo del proyecto",
+  "team": "Equipo del Proyecto",
+
+  "leon": "Desarrollador principal, creador del proyecto y responsable del backend, frontend e integración de los modelos.",
+  "lucas": "Responsable de construir y validar el modelo CNN y colaborador en el artículo científico.",
+  "igor": "Trabajó en la adaptación y documentación del modelo SVM, además de contribuir en la redacción del artículo.",
+  "manoel": "Contribuyó con pruebas, revisión del contenido y apoyo general al proyecto.",
+  "vinicius": "Asesor técnico y especialista en IA, apoyando en las decisiones arquitectónicas del proyecto.",
+  "flavio": "Profesor y asesor en el área de salud, proporcionando conocimientos clínicos para el proyecto."
 }
+
 
 
 }
