@@ -53,6 +53,7 @@
   "story": "The idea for this app came from the need to make pneumonia diagnosis more accessible and faster, using modern technologies like neural networks and machine learning models.",
   "impact": "We thought of something that could help both doctors and patients, offering a preliminary diagnosis based on X-ray images, reducing analysis time and increasing efficiency.",
   "goal": "We hope this project can positively contribute to the healthcare field and become a useful tool in everyday clinical routines.",
+  "ethics":"Ethical Considerations:<br/> This system does not replace a medical diagnosis made by a health professional. It works as a complementary support tool. For any clinical decision, always consult a specialist.",
   "read_article": "Read our full article",
   "article_link": "Click here to read the project paper",
   "team": "Project Team",

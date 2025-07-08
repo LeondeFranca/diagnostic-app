@@ -1,5 +1,6 @@
 // src/pages/About.jsx
 import React from "react";
+import { Trans } from 'react-i18next';
 import { Box, Typography, Container, Link, Avatar, Grid, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -54,6 +55,9 @@ const About = () => {
       <Typography variant="body1" paragraph>{t("about_page.story")}</Typography>
       <Typography variant="body1" paragraph>{t("about_page.impact")}</Typography>
       <Typography variant="body1" paragraph>{t("about_page.goal")}</Typography>
+      <Typography variant="body1" paragraph>
+  <Trans i18nKey="about_page.ethics" />
+</Typography>
 
       <Typography variant="h6" color="primary" sx={{ mt: 4 }}>
         📄 {t("about_page.read_article")}:

@@ -51,6 +51,7 @@
   "story": "La idea de esta aplicación surgió de la necesidad de hacer que el diagnóstico de neumonía sea más accesible y rápido, utilizando tecnologías modernas como redes neuronales y modelos de aprendizaje automático.",
   "impact": "Pensamos en algo que pudiera ayudar tanto a médicos como a pacientes, ofreciendo un diagnóstico previo basado en imágenes de rayos X, reduciendo el tiempo de análisis y aumentando la eficiencia.",
   "goal": "Esperamos que este proyecto pueda contribuir positivamente al área de la salud y convertirse en una herramienta útil en la rutina clínica diaria.",
+   "ethics":"Consideraciones éticas: <br/> Este sistema no sustituye el diagnóstico médico realizado por un profesional de la salud. Funciona como una herramienta de apoyo complementaria. Para cualquier decisión clínica, consulte siempre con un especialista.",
   "read_article": "Accede a nuestro artículo completo",
   "article_link": "Haz clic aquí para leer el artículo del proyecto",
   "team": "Equipo del Proyecto",
