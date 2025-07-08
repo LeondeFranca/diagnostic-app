@@ -7,7 +7,6 @@ import joblib
 import cv2
 from utils.preprocess import preprocess_image
 from flask import send_from_directory
-from flask import request
 
 app = Flask(__name__)
 CORS(app)
@@ -105,24 +104,6 @@ def serve_index():
 @app.route('/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)
-
-# 🔒 Rota protegida simples (não exponha publicamente depois)
-@app.route("/upload-model", methods=["POST"])
-def upload_model():
-    secret_key = request.args.get("key")
-    if secret_key != "secreta123":
-        return "Unauthorized", 403
-
-    if 'file' not in request.files:
-        return "No file part", 400
-
-    file = request.files['file']
-    if file.filename == '':
-        return "No selected file", 400
-
-    save_path = os.path.join("models", file.filename)
-    file.save(save_path)
-    return f"{file.filename} uploaded successfully!"
 
 if __name__ == "__main__":
     app.run(debug=True)
