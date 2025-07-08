@@ -7,10 +7,7 @@ venv/
 __pycache__/
 *.pyc
 
-# Dados temporários
-uploads/
-*.pkl
-*.h5
+
 
 # Node e React
 node_modules/
