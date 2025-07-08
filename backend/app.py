@@ -6,6 +6,7 @@ import tensorflow as tf
 import joblib
 import cv2
 from utils.preprocess import preprocess_image
+from flask import send_from_directory
 
 app = Flask(__name__)
 CORS(app)
@@ -96,5 +97,14 @@ def predict():
         "confidence": round(confidence, 2)
     })
 
+@app.route('/')
+def serve_index():
+    return send_from_directory('static', 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory('static', path)
+
 if __name__ == "__main__":
     app.run(debug=True)
+
