@@ -56,12 +56,12 @@
   "article_link": "Haz clic aquí para leer el artículo del proyecto",
   "team": "Equipo del Proyecto",
 
-  "leon": "Desarrollador principal, creador del proyecto y responsable del backend, frontend e integración de los modelos.",
-  "lucas": "Responsable de construir y validar el modelo CNN y colaborador en el artículo científico.",
-  "igor": "Trabajó en la adaptación y documentación del modelo SVM, además de contribuir en la redacción del artículo.",
-  "manoel": "Contribuyó con pruebas, revisión del contenido y apoyo general al proyecto.",
-  "vinicius": "Asesor técnico y especialista en IA, apoyando en las decisiones arquitectónicas del proyecto.",
-  "flavio": "Profesor y asesor en el área de salud, proporcionando conocimientos clínicos para el proyecto."
+  "leon": "Responsable de construir y validar el modelo CNN y responsable de integrar backend, frontend y modelos.",
+  "lucas": "Responsable de construir y validar el modelo de Random Forest.",
+  "igor": "Responsable de construir y validar el modelo SVM.",
+  "manoel": "Colaborador en el artículo científico y apoyo general al proyecto.",
+  "vinicius": "Profesor y asesor.",
+  "flavio": "Profesor y asesor."
 }
 
 

@@ -56,12 +56,12 @@
   "article_link": "Clique aqui para ler o artigo do projeto",
   "team": "Equipe do Projeto",
 
-  "leon": "Responsável pela construção e validação do modelo de CNN",
-  "lucas": "Responsável pela construção e validação do modelo de Random Forest",
-  "igor": "Responsável pela construção e validação do modelo de SVM",
+  "leon": "Responsável pela construção e validação do modelo de CNN e responsável pela integração de backend, frontend e modelos.",
+  "lucas": "Responsável pela construção e validação do modelo de Random Forest.",
+  "igor": "Responsável pela construção e validação do modelo de SVM.",
   "manoel": "colaborador no artigo científico e suporte geral ao projeto.",
-  "vinicius": "Professor e orientador",
-  "flavio": "Professor e orientador"
+  "vinicius": "Professor e orientador.",
+  "flavio": "Professor e orientador."
 }
 
 }
