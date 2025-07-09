@@ -8,7 +8,7 @@ __pycache__/
 *.pyc
 
 # Ignorar modelo pesado
-backend/models/svm_model.pkl
+
 
 # Node e React
 node_modules/

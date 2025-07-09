@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import os
 import numpy as np
@@ -6,20 +6,12 @@ import tensorflow as tf
 import joblib
 import cv2
 from utils.preprocess import preprocess_image
-from flask import send_from_directory
 
 app = Flask(__name__)
 CORS(app)
 
-# Carregamento dos modelos
-cnn_model = tf.keras.models.load_model("models/cnn_model.h5")
-svm_model = joblib.load("models/svm_model.pkl")
-rf_model = joblib.load("models/rf_model.pkl")  # RF baseado em features
-
-# Carregamento do scaler e encoder para SVM
-scaler = joblib.load("models/scaler.pkl")
+# ⚠️ Encoder precisa ser carregado fora, pois define as classes disponíveis
 encoder = joblib.load("models/label_encoder.pkl")
-
 CLASSES = list(encoder.classes_)  # ['Bacterial', 'Normal', 'Viral']
 
 @app.route("/predict", methods=["POST"])
@@ -42,12 +34,19 @@ def predict():
 
     try:
         if model_type == "cnn":
+            print("🧠 Carregando modelo CNN...")
+            cnn_model = tf.keras.models.load_model("models/cnn_model.h5")
+
             image = preprocess_image(file_path, as_gray=False, target_size=(224, 224))
             prediction = cnn_model.predict(np.expand_dims(image, axis=0))[0]
             class_index = int(np.argmax(prediction))
             confidence = float(prediction[class_index]) * 100
 
         elif model_type == "svm":
+            print("🧠 Carregando modelo SVM + scaler...")
+            svm_model = joblib.load("models/svm_model.pkl")
+            scaler = joblib.load("models/scaler.pkl")
+
             img = cv2.imread(file_path)
             img = cv2.resize(img, (64, 64))
             img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -60,21 +59,22 @@ def predict():
             confidence = float(prediction[class_index]) * 100
 
         elif model_type == "rf":
-            # Importações específicas apenas quando RF for usado
+            print("🧠 Carregando modelo RF + DenseNet...")
+            rf_model = joblib.load("models/rf_model.pkl")
+
+            # Importações e pipeline do DenseNet
             from tensorflow.keras.applications import DenseNet121
             from tensorflow.keras.applications.densenet import preprocess_input
             from tensorflow.keras.models import Model
             from tensorflow.keras.layers import GlobalAveragePooling2D
             from PIL import Image
 
-            # Carrega imagem e pré-processa para DenseNet
             img = Image.open(file_path).convert("RGB")
             img = img.resize((224, 224))
             img_array = np.array(img)
             img_array = preprocess_input(img_array)
             img_array = np.expand_dims(img_array, axis=0)
 
-            # Cria extrator de features
             base_model = DenseNet121(weights="imagenet", include_top=False, input_shape=(224, 224, 3))
             x = base_model.output
             x = GlobalAveragePooling2D()(x)
@@ -97,14 +97,16 @@ def predict():
         "confidence": round(confidence, 2)
     })
 
+
 @app.route('/')
 def serve_index():
     return send_from_directory('static', 'index.html')
+
 
 @app.route('/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
-
