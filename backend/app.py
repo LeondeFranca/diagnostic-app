@@ -10,7 +10,7 @@ from utils.preprocess import preprocess_image
 app = Flask(__name__)
 CORS(app)
 
-# ⚠️ Encoder precisa ser carregado fora, pois define as classes disponíveis
+
 encoder = joblib.load("models/label_encoder.pkl")
 CLASSES = list(encoder.classes_)  # ['Bacterial', 'Normal', 'Viral']
 
